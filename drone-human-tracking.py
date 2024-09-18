@@ -76,7 +76,8 @@ def calculatePositionForDetectedPerson(frame, x, y, h, w):
 # Upload YOLOv8 model 
 model = YOLO('yolov8n.pt')  
 
-video_capture = cv2.VideoCapture('/add/your/video/path.mp4')
+# change your video path
+video_capture = cv2.VideoCapture('walkingperson.mp4')
 time.sleep(1.0)
 
 while True:
