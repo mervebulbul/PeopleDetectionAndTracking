@@ -1,6 +1,10 @@
 import cv2
 import time
 from ultralytics import YOLO  
+import os
+
+# Load the video using a relative path
+video_path = os.path.join('assets', 'video.mp4')
 
 grid_size = 6 # 6x6 grid
 grid_center = int(grid_size / 2)
@@ -76,9 +80,12 @@ def calculatePositionForDetectedPerson(frame, x, y, h, w):
 # Upload YOLOv8 model 
 model = YOLO('yolov8n.pt')  
 
-# change your video path
-video_capture = cv2.VideoCapture('walkingperson.mp4')
-time.sleep(1.0)
+# Check if the video exists
+if not os.path.exists(video_path):
+    print(f"Video not found at {video_path}")
+else:
+    video_capture = cv2.VideoCapture(video_path)
+    time.sleep(1.0)
 
 while True:
     ret, frameOrig = video_capture.read()
