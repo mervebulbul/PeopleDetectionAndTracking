@@ -1,8 +1,7 @@
 
-# Drone-Based Human Tracking
+# Drone-Based Human Tracking 
 
 This project was developed to perform real-time human tracking using a drone with the YOLOv8 deep learning model. The images captured by the drone camera are processed to detect the person, and the drone is directed to follow the detected individual.
-
 
 ## Purpose
 In this project, the YOLOv8 model is used to detect humans in images captured by a drone camera, and tracking algorithms are applied based on the person's position. This enables the drone to automatically follow the detected individual.
@@ -47,15 +46,13 @@ In this project, the YOLOv8 model is used to detect humans in images captured by
 ```
 ## Usage
 
-This project processes real-time video streams from the drone camera to detect humans. Once a person is detected, their position relative to the drone camera is determined, and directional commands such as *"move left,""move right," and "move up"* are generated. Note: The actual implementation of drone control commands is not included in this project; it focuses solely on detection and tracking.
+This project processes real-time video streams from the drone camera to detect humans. Once a person is detected, their position relative to the drone camera is determined, and directional commands such as *"go left,""go right," and "go up"* are generated. Note: The actual implementation of drone control commands is not included in this project; it focuses solely on detection and tracking.
 
   
 ## Example GIF
 The following GIFs demonstrate human tracking:
 
-![](file:///C:/Users/Hp/Desktop/humantracking.gif)
-
-
+![alt text](2humantracking.gif)
 ## Development
 
 This project is optimized for real-time human tracking but can be adapted for different tracking scenarios. If you'd like to add new features or integrate actual drone control commands, feel free to fork the repository and modify the code as needed.
